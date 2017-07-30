@@ -6,4 +6,4 @@ helloWorld: $(Source)
 	mv $@ ../
 
 clean:
-	-rm helloWorld
+	-rm ../helloWorld
