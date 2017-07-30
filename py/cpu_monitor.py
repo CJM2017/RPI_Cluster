@@ -4,17 +4,6 @@ import psutil
 from mpi4py import MPI
 
 
-# method to build CPU Display
-def display_cpu():
-    print("           _  ")
-    print("     _     _  ")
-    print("  _  _  _  _  ")
-    print("  _  _  _  _  ")
-    print("  _  _  _  _  ")
-    print("")
-    print("  PC P1 P2 P3  ")
-    print("  ===========  ")
-
 # cluster specifications
 comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
@@ -38,7 +27,3 @@ if comm.rank == 0:
     for node in range(size):
         sys.stdout.write(str(recvBuf[0, node]) + '\n')
     
-    display_cpu()
-
-
-
