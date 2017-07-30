@@ -1,9 +1,10 @@
 CC = mpicc
 Source = hello_world.c
+Exec = helloWorld
 
-helloWorld: $(Source)
+$(Exec): $(Source)
 	$(CC) -o $@ $^
-	mv $@ ../
+	mv $@ ../bin/
 
 clean:
-	-rm ../helloWorld
+	-rm ../bin/$(Exec)

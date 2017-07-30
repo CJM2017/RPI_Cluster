@@ -4,7 +4,7 @@ Exec = cpuLoad
 
 $(Exec): $(Source)
 	$(CC) -o $@ $^
-	mv $@ ../
+	mv $@ ../bin/
 
 clean:
-	-rm ../$(Exec)
+	-rm ../bin/$(Exec)
